@@ -33,7 +33,7 @@ export default function RootLayout({
   );
 }
 
-// https://ui.shadcn.com - CLI component
+// https://ui.shadcn.com - CLI component "Mostly for CMS"
 // https://clerk.com - Sign in and out modal 
 // Cloudinary - picture update
 // planetscale - databse 
