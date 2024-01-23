@@ -38,6 +38,7 @@ export default function RootLayout({
 // Cloudinary - picture update
 // planetscale - databse 
 // react-hot-toast - snack bars
+// Prisma npx reset, generate and push (remember syntax)
 
 // Our route is /[storeId]/settings, First I need to extract the params 
 // Because we are using server components
