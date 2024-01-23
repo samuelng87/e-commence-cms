@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Check, ChevronsUpDown, PlusCircle, Store as StoreIcon } from "lucide-react";
 import { Store } from "@prisma/client";
 import { useParams, useRouter } from "next/navigation";
@@ -48,6 +48,7 @@ export default function StoreSwitcher({
         router.push(`/${store.value}`)
     }
 
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
@@ -60,7 +61,7 @@ export default function StoreSwitcher({
                 className={cn("w-[200px] justify-between", className)}
             >
                 <StoreIcon className="mr-2 h-4 w-4"/>
-                {currentStore?.label}
+                    {currentStore?.label}
                 <ChevronsUpDown className="ml-auto h-4 w-4 shrink-0 opacity-50"/>
             </Button>
         </PopoverTrigger>
@@ -68,7 +69,7 @@ export default function StoreSwitcher({
             <Command>
                 <CommandList>
                     <CommandInput placeholder="Search store..." />
-                        <CommandEmpty>No Store found.</CommandEmpty>
+                        <CommandEmpty>No Store foundcurrentStore</CommandEmpty>
                         <CommandGroup heading="Stores">
                             {formattedItems.map((store) => (
                                 <CommandItem
