@@ -12,6 +12,8 @@ import { Trash } from "lucide-react";
 import { Store } from "@prisma/client";
 import { Separator }  from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useOrigin } from "@/hooks/use-origin"
+
 
 import { 
     Form, 
@@ -26,6 +28,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import { AlertModal } from "@/components/modals/alert-modal";
+import { ApiAlert } from "@/components/ui/api-alert";
 
 
 interface SettingsFormProps {
@@ -123,6 +126,17 @@ export const SettingsForm:React.FC<SettingsFormProps> = ({
                 </Button>
             </form>
         </Form>
+        <Separator />
+        <Heading
+            title="API"
+            description="Easy access for fetching APIs"
+        />
+
+        <ApiAlert 
+        title="NEXT_PUBLIC_API_URL" 
+        description={`${origin}/api/${params.storeId}`}
+        variant="public"
+        />
      </>
   );
 }
