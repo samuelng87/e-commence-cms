@@ -1,5 +1,4 @@
 import prismadb from "@/lib/prismadb";
-import { Separator } from "@/components/ui/separator";
 
 interface DashboardPageProps {
     params: { 

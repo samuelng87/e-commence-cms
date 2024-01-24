@@ -12,7 +12,6 @@ import { Trash } from "lucide-react";
 import { Billboard } from "@prisma/client";
 import { Separator }  from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useOrigin } from "@/hooks/use-origin"
 
 
 import { 
@@ -29,7 +28,6 @@ import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import { AlertModal } from "@/components/modals/alert-modal";
 import ImageUpload from "@/components/ui/image-upload";
-import { Label } from "@radix-ui/react-label";
 
 const formSchema = z.object({
     label:z.string().min(1),
@@ -47,7 +45,6 @@ export const BillboardForm:React.FC<BillboardFormProps> = ({
 }) => {
     const params = useParams();
     const router = useRouter();
-    const origin = useOrigin();
     
     const [open,setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
