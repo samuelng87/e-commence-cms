@@ -52,3 +52,4 @@ export default function RootLayout({
 // 2 why do we need to encapsulate with fragment <></> ?
 // 3 what is params and await ?
 // how does dependencies array works?
+// how useCallback, useEffect, useState works?
