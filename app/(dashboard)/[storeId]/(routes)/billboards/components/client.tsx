@@ -8,6 +8,7 @@ import { Plus } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
 import { BillboardColumn, columns } from "./columns"
 import { DataTable } from "@/components/ui/data-table"
+import { ApiList } from "@/components/ui/api-list"
 
 // npx shadcn-ui@latest add table, npm install @tanstack/react-table
 
@@ -33,10 +34,11 @@ export const BillboardClient: React.FC<BillboardClientProps> = ({
           <Plus className="mr-2 h-4 w-4" /> Add New
         </Button>
       </div>
-      {/* <Separator />
-      <Heading title="API" description="API Calls for Billboards" />
-      <Separator /> */}
-        <DataTable columns={columns} data={data}/>
+      <Separator />
+      <DataTable columns={columns} data={data} searchKey="label"/>
+      <Heading title="API" description="Easy access for API Billboards" />
+      <Separator />
+      <ApiList entityName="billboards" entityIdName="billboardId"/>
     </>
   );
 };

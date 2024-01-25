@@ -134,11 +134,12 @@ export const SettingsForm:React.FC<SettingsFormProps> = ({
             title="API"
             description="Easy access for fetching APIs"
         />
+        <Separator />
 
         <ApiAlert 
         title="NEXT_PUBLIC_API_URL" 
-        description={`${origin}/api/${params.storeId}`}
         variant="public"
+        description={`${origin}/api/${params.storeId}`}
         />
      </>
   );

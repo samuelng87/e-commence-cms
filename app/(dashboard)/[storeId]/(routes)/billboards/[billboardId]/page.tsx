@@ -13,7 +13,7 @@ const Billboardpage = async ({
             id: params.billboardId
         }
     });
-    console.log('Existing Billboard: ', billboard?.label)
+    console.log('Existing Billboard: ', billboard?.label, billboard, 'this log is [billboardId] -> page')
   return (
     <div className="flex-col">
         <div className="flex-1 space-y-4 p-8 pt-6">

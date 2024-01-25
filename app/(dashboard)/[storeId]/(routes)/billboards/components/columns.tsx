@@ -1,6 +1,9 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
+import { CellAction } from "./cell-action"
+import Image from "next/image";
+
 
 export type BillboardColumn = {
   id: string
@@ -20,20 +23,22 @@ export const columns: ColumnDef<BillboardColumn>[] = [
   },
   {
     accessorKey: "imageUrl",
-    header: "Image URL",
-    cell: ({ row }) => {
+    header: "Image",
+    cell : ({ row }) => {
       const original = row.original as BillboardColumn;
-      return 
-      <div>
-        <img 
-        width={50} 
-        src={original.imageUrl} 
-        alt="Billboard Image" />
-      </div>;
+      return (
+        <Image
+          className="rounded-md"
+          height="100"
+          width="100"
+          alt="billboards listing image"
+          src={original.imageUrl} 
+         />
+        )
     },
-  },    
+  },
   {
-    accessorKey: "id",max23
-    header: "ID",
+    id: "actions",
+    cell: ( {row } ) => <CellAction data={row.original}/>
   },
 ];
