@@ -9,19 +9,22 @@ datasource db {
 }
 
 model Store {
-  id         String      @id @default(uuid())
-  name       String
-  userId     String
+  id     String @id @default(uuid())
+  name   String
+  userId String
+
   billboards Billboard[] @relation("StoreToBillboard")
   categories Category[]  @relation("StoreToCategory")
   sizes      Size[]      @relation("StoreToSize")
-  createdAt  DateTime    @default(now())
-  updatedAt  DateTime    @updatedAt
+  colors     Color[]     @relation("StoreToColor")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Billboard {
   id         String     @id @default(uuid())
-  storeId    String
+  storeId    String // Foreign Key to Store
   store      Store      @relation("StoreToBillboard", fields: [storeId], references: [id])
   label      String
   imageUrl   String
@@ -34,7 +37,7 @@ model Billboard {
 
 model Category {
   id          String    @id @default(uuid())
-  storeId     String
+  storeId     String // Foreign Key to Store
   store       Store     @relation("StoreToCategory", fields: [storeId], references: [id])
   billboardId String
   billboard   Billboard @relation(fields: [billboardId], references: [id])
@@ -48,8 +51,20 @@ model Category {
 
 model Size {
   id        String   @id @default(uuid())
-  storeId   String
+  storeId   String // Foreign Key to Store
   store     Store    @relation("StoreToSize", fields: [storeId], references: [id])
+  name      String
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([storeId])
+}
+
+model Color {
+  id        String   @id @default(uuid())
+  storeId   String // Foreign Key to Store
+  store     Store    @relation("StoreToColor", fields: [storeId], references: [id])
   name      String
   value     String
   createdAt DateTime @default(now())
