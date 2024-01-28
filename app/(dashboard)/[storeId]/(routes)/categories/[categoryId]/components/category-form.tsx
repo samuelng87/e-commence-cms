@@ -68,9 +68,9 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
       } else {
         await axios.post(`/api/${params.storeId}/categories`, data);
       }
-      router.refresh();
       router.push(`/${params.storeId}/categories`);
       toast.success(toastMessage);
+      router.refresh();
     } catch (error: any) {
       toast.error('Something went wrong.');
     } finally {
@@ -82,9 +82,9 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
     try {
       setLoading(true);
       await axios.delete(`/api/${params.storeId}/categories/${params.categoryId}`);
-      router.refresh();
       router.push(`/${params.storeId}/categories`);
       toast.success('Category deleted.');
+      router.refresh();
     } catch (error: any) {
       toast.error('Make sure you removed all products using this category first.');
     } finally {
@@ -137,15 +137,28 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Billboard</FormLabel>
-                  <Select disabled={loading} onValueChange={field.onChange} value={field.value} defaultValue={field.value}>
+                  <Select 
+                    disabled={loading} 
+                    onValueChange={field.onChange} 
+                    value={field.value} 
+                    defaultValue={field.value}
+                    >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue defaultValue={field.value} placeholder="Select a billboard" />
+                        <SelectValue 
+                        defaultValue={field.value} 
+                        placeholder="Select a billboard" 
+                        />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
                       {billboards.map((billboard) => (
-                        <SelectItem key={billboard.id} value={billboard.id}>{billboard.label}</SelectItem>
+                        <SelectItem 
+                        key={billboard.id} 
+                        value={billboard.id}
+                        >
+                            {billboard.label}
+                        </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
