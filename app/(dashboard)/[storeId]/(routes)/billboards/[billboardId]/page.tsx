@@ -3,7 +3,7 @@ import { BillboardForm } from "./components/billboard-form";
 
 
 
-const Billboardpage = async ({
+const BillboardPage = async ({
     params
 }: {
     params: { billboardId: string }
@@ -23,4 +23,4 @@ const Billboardpage = async ({
   )
 }
 
-export default Billboardpage;
+export default BillboardPage;
