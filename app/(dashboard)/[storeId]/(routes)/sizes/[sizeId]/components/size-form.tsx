@@ -115,13 +115,16 @@ export const SizeForm: React.FC<SizeFormProps> = ({
         />
 
             {initialData && (
-                <Button
-                disabled={loading}
-                variant="destructive"
-                size="icon"
-                onClick={() => setOpen(true)}
+                    <Button
+                    disabled={loading}
+                    variant="destructive"
+                    size="default"
+                    onClick={() => setOpen(true)}
             >
-                <Trash className="h-4 w-4"/>
+                Delete {initialData.name} 
+                <Trash 
+                    className="ml-2 h-4 w-4"
+                    />
             </Button>
             )}
 

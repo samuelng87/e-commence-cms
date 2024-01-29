@@ -100,10 +100,13 @@ export const SettingsForm:React.FC<SettingsFormProps> = ({
         <Button
                 disabled={loading}
                 variant="destructive"
-                size="icon"
+                size="default"
                 onClick={() => setOpen(true)}
         >
-            <Trash className="h-4 w-4"/>
+            Delete {initialData.name} 
+            <Trash 
+                className="ml-2 h-4 w-4"
+                />
         </Button>
         </div>
         <Separator />
