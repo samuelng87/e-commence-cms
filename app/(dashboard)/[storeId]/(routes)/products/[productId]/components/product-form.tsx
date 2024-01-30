@@ -177,7 +177,7 @@ export const ProductForm:React.FC<ProductFormProps> = ({
                         <FormItem>
                             <FormLabel>Images</FormLabel>
                             <FormControl>
-                                <ImageUpload
+                                <ImageUpload 
                                 value={field.value.map((image) => image.url)}
                                 disabled={loading}
                                 onChange={(url) => field.onChange([...field.value, { url }])}
