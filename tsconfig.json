@@ -18,8 +18,7 @@
       }
     ],
     "paths": {
-      "@/components/ui/heading": ["./src/components/ui/heading"],
-      "@/components/ui/button": ["./src/components/ui/button"],    
+      "@/*": ["./*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
