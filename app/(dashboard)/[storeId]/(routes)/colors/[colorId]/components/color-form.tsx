@@ -2,7 +2,6 @@
 "use client";
 
 import * as z from "zod"
-import { Heading } from "@/components/ui/heading";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -27,7 +26,6 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import { AlertModal } from "@/components/modals/alert-modal";
-import ImageUpload from "@/components/ui/image-upload";
 
 const formSchema = z.object({
     name:z.string().min(1),
@@ -108,10 +106,6 @@ export const ColorForm: React.FC<ColorFormProps> = ({
     loading={loading}
     />
     <div className="flex items-center justify-between">
-        <Heading 
-            title={title}
-            description={description}
-        />
 
             {initialData && (
             <Button

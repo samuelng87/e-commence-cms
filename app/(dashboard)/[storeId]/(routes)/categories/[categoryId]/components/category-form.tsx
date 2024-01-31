@@ -21,7 +21,6 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Separator } from "@/components/ui/separator"
-import { Heading } from "@/components/ui/heading";
 import { AlertModal } from "@/components/modals/alert-modal"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
@@ -102,7 +101,6 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
       loading={loading}
     />
      <div className="flex items-center justify-between">
-        <Heading title={title} description={description} />
         {initialData && (
                   <Button
                     disabled={loading}
