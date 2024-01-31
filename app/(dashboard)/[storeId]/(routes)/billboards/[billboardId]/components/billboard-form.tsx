@@ -96,9 +96,6 @@ export const BillboardForm:React.FC<BillboardFormProps> = ({
             setOpen(false)
         }
     }
-    console.log(initialData?.label,"This console log is at billboard-form");
-    console.log(initialData?.imageUrl,"This console log is at billboard-form");
-
 
   return (
     <>

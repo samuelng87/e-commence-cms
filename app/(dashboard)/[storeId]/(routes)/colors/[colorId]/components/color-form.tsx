@@ -98,9 +98,6 @@ export const ColorForm: React.FC<ColorFormProps> = ({
             setOpen(false)
         }
     }
-    console.log(initialData?.name,"This console log is at colors-form");
-    console.log(initialData?.value,"This console log is at colors-form");
-
 
   return (
     <>
