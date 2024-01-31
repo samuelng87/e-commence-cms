@@ -23,6 +23,7 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { AlertModal } from "@/components/modals/alert-modal"
 import ImageUpload from "@/components/ui/image-upload"
+import { Heading } from "@/components/ui/heading"
 
 const formSchema = z.object({
   label: z.string().min(1),
@@ -100,6 +101,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
       loading={loading}
     />
      <div className="flex items-center justify-between">
+        <Heading title={title} description={description} />
         {initialData && (
           <Button
             disabled={loading}

@@ -2,6 +2,7 @@
 "use client";
 
 import * as z from "zod"
+import { Heading } from "@/components/ui/heading";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -106,6 +107,10 @@ export const ColorForm: React.FC<ColorFormProps> = ({
     loading={loading}
     />
     <div className="flex items-center justify-between">
+        <Heading 
+            title={title}
+            description={description}
+        />
 
             {initialData && (
             <Button

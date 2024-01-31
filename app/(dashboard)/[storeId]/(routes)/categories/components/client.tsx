@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator"
 import { Plus } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
@@ -23,7 +24,10 @@ export const CategoryClient: React.FC<CategoryClientProps> = ({
   return (
     <>
       <div className="flex items-center justify-between">
-
+        <Heading 
+          title={`Categories (${data.length})`} 
+          description="Manage categories for your store" 
+          />
         <Button onClick={() => router.push(`/${params.storeId}/categories/new`)}>
           <Plus className="mr-2 h-4 w-4" />
           Add New
@@ -31,6 +35,7 @@ export const CategoryClient: React.FC<CategoryClientProps> = ({
       </div>
       <Separator />
       <DataTable columns={columns} data={data} searchKey="name"/>
+      <Heading title="API" description="Easy access for API Categories" />
       <Separator />
       <ApiList entityName="categories" entityIdName="categoryId"/>
     </>
