@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import * as z from "zod"
 import axios from "axios"
@@ -23,7 +23,6 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { AlertModal } from "@/components/modals/alert-modal"
 import ImageUpload from "@/components/ui/image-upload"
-import { Heading } from "@/components/ui/heading"
 
 const formSchema = z.object({
   label: z.string().min(1),
@@ -35,8 +34,6 @@ type BillboardFormValues = z.infer<typeof formSchema>
 interface BillboardFormProps {
   initialData: Billboard | null;
 };
-
-export const dynamic = 'force-dynamic'
 
 
 export const BillboardForm: React.FC<BillboardFormProps> = ({
@@ -103,7 +100,6 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
       loading={loading}
     />
      <div className="flex items-center justify-between">
-        <Heading title={title} description={description} />
         {initialData && (
           <Button
             disabled={loading}
