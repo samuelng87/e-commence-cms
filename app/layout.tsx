@@ -24,7 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body className={inter.className}>
-      {/* defaultTheme can change either "dark" or "system" mode*/}
+      {/* defaultTheme can change either "dark", "light" or "system" mode*/}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <ToasterProvider/>
         <ModalProvider/>
