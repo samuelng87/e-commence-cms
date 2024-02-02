@@ -18,10 +18,6 @@ export const columns: ColumnDef<ColorColumn>[] = [
     header: "Name",
   },
   {
-    accessorKey: "id",
-    header: "ID",
-  },
-  {
     accessorKey: "value",
     header: "Value",
     cell : ({ row }) => (
@@ -37,6 +33,10 @@ export const columns: ColumnDef<ColorColumn>[] = [
   {
     accessorKey: "createdAt",
     header: "Date",
+  },
+  {
+    accessorKey: "id",
+    header: "ID",
   },
   {
     id: "actions",

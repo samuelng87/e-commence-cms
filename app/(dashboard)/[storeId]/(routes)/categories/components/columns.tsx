@@ -19,10 +19,6 @@ export const columns: ColumnDef<CategoryColumn>[] = [
     header: "Name",
   },
   {
-    accessorKey: "id",
-    header: "ID",
-  },
-  {
     accessorKey: "billboard",
     header: "Billboard",
     cell : ({ row }) => row.original.billboardLabel,
@@ -46,6 +42,10 @@ export const columns: ColumnDef<CategoryColumn>[] = [
   {
     accessorKey: "createdAt",
     header: "Date",
+  },
+  {
+    accessorKey: "id",
+    header: "ID",
   },
   {
     id: "actions",

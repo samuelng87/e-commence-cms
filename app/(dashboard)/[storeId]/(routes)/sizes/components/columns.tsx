@@ -2,7 +2,6 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 import { CellAction } from "./cell-action"
-import Image from "next/image";
 
 
 export type SizeColumn = {
@@ -18,10 +17,6 @@ export const columns: ColumnDef<SizeColumn>[] = [
     header: "Name",
   },
   {
-    accessorKey: "id",
-    header: "ID",
-  },
-  {
     accessorKey: "value",
     header: "Value",
   },
@@ -29,6 +24,10 @@ export const columns: ColumnDef<SizeColumn>[] = [
     accessorKey: "createdAt",
     header: "Date",
   },
+  {
+    accessorKey: "id",
+    header: "ID",
+  },``
   {
     id: "actions",
     cell: ( {row } ) => <CellAction data={row.original}/>

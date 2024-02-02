@@ -18,10 +18,6 @@ export const columns: ColumnDef<BillboardColumn>[] = [
     header: "Label",
   },
   {
-    accessorKey: "id",
-    header: "ID",
-  },
-  {
     accessorKey: "createdAt",
     header: "Date",
   },
@@ -40,6 +36,10 @@ export const columns: ColumnDef<BillboardColumn>[] = [
          />
         )
     },
+  },
+  {
+    accessorKey: "id",
+    header: "ID",
   },
   {
     id: "actions",
