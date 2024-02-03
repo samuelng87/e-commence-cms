@@ -131,10 +131,10 @@ model Order {
 // This an intermediary for a many to many relationship
 model OrderItem {
   id        String  @id @default(uuid())
+  product   Product @relation(fields: [productId], references: [id])
   orderId   String // Foreign Key to Order
   order     Order   @relation(fields: [orderId], references: [id])
   productId String // Foreign Key to Product
-  product   Product @relation(fields: [productId], references: [id])
 
   @@index([orderId])
   @@index([productId])
