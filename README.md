@@ -1,4 +1,4 @@
-#E-Commerce CMS
+# E-Commerce Admin Dashboard
 
 ![](https://github.com/samuelng87/e-commerce-cms/blob/main/admindashboard.gif)
 
