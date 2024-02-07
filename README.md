@@ -1,6 +1,6 @@
 # E-Commerce Admin Dashboard
 
-![](https://github.com/samuelng87/Airbnb-Clone/blob/main/admindashboard.gif)
+![](https://github.com/samuelng87/e-commerce-cms/blob/main/admindashboard.gif)
 
 
 
