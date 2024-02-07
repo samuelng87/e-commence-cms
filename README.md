@@ -1,3 +1,7 @@
+#E-Commerce CMS
+
+![](https://github.com/samuelng87/e-commerce-cms/blob/main/admindashboard.gif)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
